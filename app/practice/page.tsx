@@ -1,17 +1,16 @@
 "use client"
-import { Button } from '@/components/ui/button'
 import React from 'react'
+import { DataTable } from './data-table'
+import { columns } from './column'
 import { blindJson } from '@/resources/blind'
 
 
 const PracticePage = () => {
 
-    const showData = () => {
-        console.log(blindJson);
-    }
-
     return (
-        <Button onClick={showData}>Click Me!!!</Button>
+        <div className="container mx-auto py-10">
+            <DataTable columns={columns} data={blindJson} />
+        </div>
     )
 }
 
